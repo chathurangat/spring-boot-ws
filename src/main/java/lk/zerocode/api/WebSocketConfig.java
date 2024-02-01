@@ -39,7 +39,7 @@ public class WebSocketConfig
 
 
     @Bean
-    public WebSocketHandler getHandler(){
-        return new WebSocketHandler();
+    public MyWebSocketHandler getHandler(){
+        return new MyWebSocketHandler();
     }
 }
