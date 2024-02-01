@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  fr-ws-service:
+    image: fr-ws-service
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - "7788:7788"
+    volumes:
+      - /root/uploaded-files:/app/data
+    networks:
+      - bighut_lk_network
+
+networks:
+  bighut_lk_network:
+    external:
+      name: bighut_lk_network
